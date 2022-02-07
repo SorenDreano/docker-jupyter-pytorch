@@ -1,3 +1,7 @@
+# Compute Capability
+This image uses builds from https://github.com/nelson-liu/pytorch-manylinux-binaries to provide pytorch for 
+Nvidia devices with Compute Capability 3.5, like the Tesla k40.
+
 # Features
 This image contains pytorch, jupyter notebook, tensorboardx, and other useful python packages (See Dockerfile).  
 Once instantiated, it'll run a jupyter notebook server for you (See start.sh). 
