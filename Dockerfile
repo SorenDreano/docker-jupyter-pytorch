@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
          libsm6 \
          libxext6 \
          libxrender-dev \
+         git \
+         wget\
          ffmpeg && \
      rm -rf /var/lib/apt/lists/*
 
@@ -15,8 +17,9 @@ RUN pip install --upgrade --upgrade-strategy only-if-needed scikit-image scikit-
 RUN pip uninstall -y torch Pillow
 RUN pip install Pillow==6.2
 RUN pip uninstall -y torch
-RUN pip install torch==1.9.0+cu102 -f https://nelsonliu.me/files/pytorch/whl/torch_stable.html
+#RUN pip install torch==1.9.0+cu102 -f https://nelsonliu.me/files/pytorch/whl/torch_stable.html
 RUN pip install torchvision
+RUN pip install torch==1.9.0+cu102 -f https://nelsonliu.me/files/pytorch/whl/torch_stable.html
 
 RUN mkdir -p /home/me && chmod 1777 /home/me
 
